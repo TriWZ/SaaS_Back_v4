@@ -1,16 +1,16 @@
 from fastapi import APIRouter
-from sqlalchemy.orm import Session
 from database import SessionLocal
+from sqlalchemy.orm import Session
 import pandas as pd
 
 router = APIRouter()
 
-# 测试接口：检查是否存活
+# 测试用路由
 @router.get("/")
-def test_energy():
+def energy_status():
     return {"message": "energy route active"}
 
-# 主数据接口：获取所有建筑能耗数据
+# ✅ 数据查询接口（你的前端依赖这个）
 @router.get("/data")
 def get_energy_data():
     try:
