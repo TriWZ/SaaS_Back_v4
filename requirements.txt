@@ -2,5 +2,6 @@
 fastapi
 uvicorn
 sqlalchemy
+pandas
 pydantic
 python-multipart
